@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Dashboard</title>
+  <!-- ================= Favicon ================== -->
+  <!-- Standard -->
+  <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+  <!-- Retina iPad Touch Icon-->
+  <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+  <!-- Retina iPhone Touch Icon-->
+  <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+  <!-- Standard iPad Touch Icon-->
+  <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+  <!-- Standard iPhone Touch Icon-->
+  <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+  <!-- Styles -->
+  <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+  <link href="assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
+  <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+  <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+  <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+  <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+  <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+  <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/lib/helper.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/your-embed-code.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/results.css">
+
+
+
+  <!-- Custom styles for this template -->
+</head>
+<style>
+  .item {
+    border: 2px solid black;
+  }
+
+  .item:hover {
+    
+    transform: scale(1.03);
+        transition: 0.5s all ease;
+  }
+</style>
+
+<body>
+
+  <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" style="background-color: #363E4B;">
+    <div class="nano" style="background-color: #363E4B;">
+      <div class="nano-content" style="background-color: #363E4B;">
+        <ul>
+          <div class="logo"><a href="#">
+              <!-- <img src="assets/images/logo.png" alt="" /> --><span style="color: white;"> Teacher
+                Dashboard</span>
+            </a></div>
+          <li class="label">Main</li>
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-home"></i>
+              Dashboard <span class="badge badge-primary">2</span> <span
+                class="sidebar-collapse-icon ti-angle-down"></span></a>
+            <ul>
+              <li><a href="#">Dashboard 1</a></li>
+
+            </ul>
+          </li>
+
+          <li class="label" style="background-color: #363E4B;">Apps</li>
+          <li style="background-color: #363E4B;"><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i
+                class="ti-bar-chart-alt"></i> Charts <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+          </li>
+          <li><a href="#" style="background-color: #363E4B;"><i class="ti-calendar"></i> Calender </a></li>
+          <li><a href="#" style="background-color: #363E4B;"><i class="ti-email"></i> Email</a></li>
+          <li><a href="#" style="background-color: #363E4B;"><i class="ti-user"></i> Profile</a></li>
+          <li><a href="#" style="background-color: #363E4B;"><i class="ti-layout-grid2-alt"></i> Widget</a>
+          </li>
+          <li class="label">Features</li>
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-layout"></i>
+              settings <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+          </li>
+
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-layout-grid4-alt"></i> Table
+              <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+          </li>
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-heart"></i> Icons
+              <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+          </li>
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-map"></i> Maps
+              <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+          </li>
+          <li class="label" style="background-color: #363E4B;">Form</li>
+          <li><a href="#" style="background-color: #363E4B;"><i class="ti-view-list-alt"></i> Basic Form </a>
+          </li>
+          <li class="label">Extra</li>
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-files"></i>
+              Invoice <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+          </li>
+          <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-target"></i> Pages
+              <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+            <ul>
+              <li><a href="#" style="background-color: #363E4B;">Login</a></li>
+              <li><a href="#" style="background-color: #363E4B;">Register</a></li>
+              <li><a href="#" style="background-color: #363E4B;">Forgot password</a></li>
+            </ul>
+          </li>
+
+          <li><a style="background-color: #363E4B;"><i class="ti-close"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /# sidebar -->
+
+  <div class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-1 mt-2">
+          <div class="float-left">
+            <div class="hamburger sidebar-toggle">
+              <i style=" color: #a1a9bc;" class="fa fa-angle-left"></i>
+              <i style=" color: #a1a9bc;" class="fa fa-align-justify"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-2" style="margin-left: 150px;">
+          <div class="input-group">
+            <div class="input-group-btn search-panel">
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="col-lg-3 mt-2">
+          <div class="float-right">
+            <div class="dropdown dib">
+              <div class="header-icon" data-toggle="dropdown">
+                <i style=" font-size: 20px;" class="fa fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1 mt-0">
+                  3
+
+                </span>
+                <div class="drop-down dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-content-heading">
+                    <span class="text-left">Recent Notifications</span>
+                  </div>
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">5 members joined today </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">likes a photo of you</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">Hi , Just wanted to let you
+                              ...</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">Hi , Just wanted to let you
+                              ...</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="text-center">
+                        <a href="#" class="more-link">See All</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown dib">
+              <div class="header-icon" data-toggle="dropdown">
+                <i class="ti-email"></i>
+                <div class="drop-down dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-content-heading">
+                    <span class="text-left">2 New Messages</span>
+                    <a href="#">
+                      <i class="ti-pencil-alt pull-right"></i>
+                    </a>
+                  </div>
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <li class="notification-unread">
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">Hi demo, Just wanted to let you
+                              ...</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="notification-unread">
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">Hi demo, Just wanted to let you
+                              ...</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">Hi , Just wanted to let you
+                              ...</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                          <div class="notification-content">
+                            <small class="notification-timestamp pull-right">02:34
+                              PM</small>
+                            <div class="notification-heading">Mr.Musavir</div>
+                            <div class="notification-text">Hi , Just wanted to let you
+                              ...</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="text-center">
+                        <a href="#" class="more-link">See All</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown dib">
+              <div class="header-icon" data-toggle="dropdown">
+                <span class="user-avatar">Mr.Mugees
+                  <i class="ti-angle-down f-s-10"></i>
+                </span>
+                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-content-heading">
+
+                  </div>
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i class="ti-user"></i>
+                          <span>Profile</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="ti-email"></i>
+                          <span>Inbox</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="ti-settings"></i>
+                          <span>Setting</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <i class="ti-lock"></i>
+                          <span>Lock Screen</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="ti-power-off"></i>
+                          <span>Logout</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="content-wrap" style="background-color: #f8f8ff;">
+    <div class="main">
+
+
+      <div style="width: 101%;"
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom shadow">
+       
+      </div>
+      <div class="card shadow" style="margin: 3%;">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div>
+                  <h3>Exam: Unit 6 Final exam</h3>
+                  <h6 style="color: #a1a9bc;">Course: English lv 6</h6>
+                  <h6 style="color: #a1a9bc;">20 Question: All in one exam </h6>
+                </div>
+              </div>
+              <div class="col">
+                <div style="float: right;">
+                  <h5>21 Oct 2020 9:00 AM -> 12:AM</h5>
+                  <div style="display: flex; gap: 15px;">
+                    <h6><i class="far fa-clock" style="color: #a1a9bc;"><span> 30 Min</span></i> </h6>
+                    <h6 style="color: #a1a9bc;"><i class="fas fa-file-signature"></i> <span>50 Marks (Pass marks:
+                        40)</span> </h6>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col itemsStatus">
+              <div class="card item">
+                <div class="itemsStatusIconsandtext">
+                  <i id="itemsIcons" class="ti-user iconsStundents" style="margin-left: -30px;">
+                    <h6 style="display: grid">Total Students <span>3576</span></h6>
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div class="col itemsStatus">
+              <div class="card item">
+                <div class="itemsStatusIconsandtext">
+                  <i id="itemsIcons" class="far fa-star iconsOverScore">
+                    <h6 style="display: grid">Average Score <span>2960</span></h6>
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div class="col itemsStatus">
+              <div class="card item">
+                <div class="itemsStatusIconsandtext">
+                  <i id="itemsIcons" class="fas fa-info iconsAbsents">
+                    <h6 style="display: grid">Total Absent Students <span>122</span></h6>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col itemsStatus">
+              <div class="card item">
+                <div class="itemsStatusIconsandtext">
+                  <i id="itemsIcons" class="fas fa-check iconsFinish">
+                    <h6 style="display: grid">Total Finish Students <span>6750</span></h6>
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div class="col itemsStatus">
+              <div class="card item">
+                <div class="itemsStatusIconsandtext">
+
+                  <i id="itemsIcons" class="fas fa-handshake iconsPassed">
+                    <h6 style="display: grid">Total Passed Students <span>3000</span></h6>
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div class="col itemsStatus">
+              <div class="card item">
+                <div class="itemsStatusIconsandtext">
+                  <i id="itemsIcons" class="fas fa-user-circle iconsFailed">
+                    <h6 style="display: grid">Total Failed Students <span>650</span></h6>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div style="display: flex; width: 100%; background-color: #FEF8C6;"
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom ">
+        <h5 style="padding-left: 15px; " class="h2"> <i style="display: flex; " class="far fa-question-circle ">
+            <h6 style="font-family: cursive; margin-top: 7px; padding-left: 10px;">Exam Result aren't published yet .
+            </h6>
+          </i>
+        </h5>
+        <div style="float: right ; position: absolute;
+        right: 45px;">
+          <button style="color:#578edd; background: transparent ; border-color:#a1a9bc; font-size: 14px;
+        padding: 5px 10px 5px 10px;" type="button" class="btn btn-secondary">Published without Feedback</button>
+          <button style="color:#578edd; background: transparent;  border-color:#a1a9bc; font-size: 14px;
+        padding: 5px 10px 5px 10px;" type="button" class="btn btn-secondary">Published with Feedback</button>
+        </div>
+      </div>
+
+      <div style="padding: 0px 30px 0px 30px;">
+
+
+        <div style="display: flex; height: 38px; gap: 20px;">
+
+
+          <div class="input-group" style="width:auto">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Status: all</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Present</a></li>
+              <li><a class="dropdown-item" href="#">Absent</a></li>
+              <li><a class="dropdown-item" href="#">Failed</a></li>
+
+            </ul>
+          </div>
+          <div class="input-group" style="width:auto">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Grade: all</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">A+</a></li>
+              <li><a class="dropdown-item" href="#">A</a></li>
+              <li><a class="dropdown-item" href="#">B</a></li>
+              <li><a class="dropdown-item" href="#">C</a></li>
+
+            </ul>
+          </div>
+          <div class="input-group" style="width:auto">
+            <button class="btn btn-outline-secondary " type="button">Submitted Time <i class="far fa-calendar-alt
+              "></i> </button>
+          </div>
+          <div>
+            <button style="border: none ;" class="btn btn-outline-secondary " type="button"><i class="far fa-times-circle
+              "></i> Close</button>
+          </div>
+        </div>
+        <table class="table mt-3" style="text-align: center;  ">
+          <thead>
+            <tr>
+              <th scope="col">Student Name <i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+              <th scope="col">Passed/Failed <i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+              <th scope="col">Score <i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+              <th scope="col">Grade <i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+              <th scope="col">Time Lapse <i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+              <th scope="col">Submitted/Timeout <i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+              <th scope="col">Details<i style="cursor: pointer;" class="fas fa-chevron-down "></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif
+              " alt=""><span> John Doe</span></th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+            <tr>
+              <th scope="row"><img style="width: 25px;" src="assets/images/profile.jfif" alt=""><span> John Doe</span>
+              </th>
+              <td style="color:green">Passed</td>
+              <td style="color:green">45/50 (85%) </td>
+              <td style="color:green">Excellent</td>
+              <td>22 MIN</td>
+              <td>09 NOV 2021, 9:00am</td>
+              <td style="color:blue; cursor: pointer;" data-toggle="modal" data-target="#exampleModal"> See Details</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Results Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table">
+
+
+
+
+                  <tr>
+
+                    <th>Name:</th>
+                    <td>Student Name</td>
+
+                  </tr>
+                  <tr>
+
+                    <th>Father Name:</th>
+                    <td>Father Name</td>
+
+                  </tr>
+                  <tr>
+
+                    <th>Class:</th>
+                    <td>5</td>
+
+                  </tr>
+                  <tr>
+                    <th>Status:</th>
+                    <td>Passed</td>
+
+                  </tr>
+                  <tr>
+                    <th>Grade:</th>
+                    <td>A</td>
+
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal"
+                data-target="#exampleModal2">More Details</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Print</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2-->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Subject</th>
+                      <th>Marks Obtained</th>
+                      <th>Status</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Maths</td>
+                      <td>75</td>
+                      <td>Passed</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Physics</td>
+                      <td>75</td>
+                      <td>Passed</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Chemistry</td>
+                      <td>75</td>
+                      <td>Passed</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Print</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+          <div class=" col-lg-1" style="margin-left: 37%;">
+    
+              <nav class="pagination-box" aria-label="Page navigation">
+    
+                  <ul class="pagination">
+                      <li class="page-item">
+                          <a href="#" class="page-link" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                          </a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active">
+                          <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">5</a>
+                      </li>
+                      <li class="page-item">
+                          <a href="#" class="page-link" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
+              <br><br>
+          </div>
+      </div>
+  </div>
+  <br>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+
+  <!-- jquery vendor -->
+  <script src="assets/js/lib/jquery.min.js"></script>
+  <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+  <!-- nano scroller -->
+  <script src="assets/js/lib/menubar/sidebar.js"></script>
+  <script src="assets/js/lib/preloader/pace.min.js"></script>
+  <!-- sidebar -->
+
+  <script src="assets/js/lib/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <!-- bootstrap -->
+
+  <script src="assets/js/lib/calendar-2/moment.latest.min.js"></script>
+  <script src="assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+  <script src="assets/js/lib/calendar-2/pignose.init.js"></script>
+
+
+  <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/js/lib/weather/weather-init.js"></script>
+  <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+  <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+  <script src="assets/js/lib/chartist/chartist.min.js"></script>
+  <script src="assets/js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+  <script src="assets/js/lib/sparklinechart/sparkline.init.js"></script>
+  <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+  <!-- scripit init-->
+  <script src="assets/js/dashboard2.js"></script>
+
+
+</body>
+
+</html>

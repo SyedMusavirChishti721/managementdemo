@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>exams results</title>
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+    <!-- Styles -->
+    <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/your-embed-code.js"></script>
+</head>
+
+<body>
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" style="background-color: #363E4B;">
+        <div class="nano" style="background-color: #363E4B;">
+            <div class="nano-content" style="background-color: #363E4B;">
+                <ul>
+                    <div class="logo"><a href="#">
+                            <!-- <img src="assets/images/logo.png" alt="" /> --><span style="color: white;"> Teacher
+                                Dashboard</span>
+                        </a></div>
+                    <li class="label">Main</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;" href="teacher-dashboard.html"><i class="ti-home"></i>
+                            Dashboard </a>
+                     
+                    </li>
+
+                    <li class="label" style="background-color: #363E4B;">Apps</li>
+                    <li style="background-color: #363E4B;"><a class="sidebar-sub-toggle" href="students-data.html"
+                            style="background-color: #363E4B;"><i class="ti-user"></i> Students </a>
+
+                    </li>
+                    <li><a href="daily-attendance.html" style="background-color: #363E4B;"><i class="ti-calendar"></i>Attendance </a></li>
+                    <li><a href="daily-attendance.html" style="background-color: #363E4B;"><i class="ti-files"></i> Leaves</a></li>
+                    <li><a href="teacher-dashboard.html" style="background-color: #363E4B;"><i class="ti-user"></i> Profile</a></li>
+                    <li><a href="app-email.html" style="background-color: #363E4B;"><i class="ti-email"></i>Emails</a>
+                    </li>
+                    <li><a href="fees-delay.html" style="background-color: #363E4B;"><i class="fa fa-money"></i>Fees Delay</a>
+                    </li>
+                  
+
+                    <li><a href="calender.html" style="background-color: #363E4B;"><i class="ti-calendar"></i>calendar</a>
+                    </li>
+                  
+                    <li><a href="exams-results.html" style="background-color: #363E4B;"><i class="ti-target"></i> Exams Results</a></li>
+                    <li><a href="reports.html" style="background-color: #363E4B;"><i class="ti-files"></i> Reports</a></li>
+                  
+                    <li><a style="background-color: #363E4B;"><i class="ti-close"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 mt-2">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <i style=" color: #a1a9bc;" class="fa fa-angle-left"></i>
+                            <i style=" color: #a1a9bc;" class="fa fa-align-justify"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-2" style="margin-left: 150px;">
+                    <div class="input-group">
+                        <div class="input-group-btn search-panel">
+
+                        </div>
+
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 mt-2">
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i style=" font-size: 20px;" class="fa fa-bell"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1 mt-0">
+                                    3
+
+                                </span>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="#">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">Mr.Mugees
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-email"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1 style="color: white;">Hello, <span>Welcome Here</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item "><a href="#" style="color: white;">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" style="color: white;">Exam Results</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="bootstrap-data-table-panel">
+                                    <div class="table-responsive">
+                                        <table id="bootstrap-data-table-export"
+                                            class="table table-striped table-bordered" style="text-align: center;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Status</th>
+                                                    <th>Grade</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Passed</td>
+                                                    <td>A+</td>
+                                                    <td><button data-toggle="modal" data-target="#exampleModal"
+                                                            id="viewdet">View Details</button></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /# card -->
+                        </div>
+                        <!-- /# column -->
+                    </div>
+                    <!-- /# row -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Results Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="table-responsive">
+                                        <table class="table" border="1">
+
+
+
+
+                                            <tr>
+
+                                                <th>Name:</th>
+                                                <td>Student Name</td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <th>Father Name:</th>
+                                                <td>Father Name</td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <th>Class:</th>
+                                                <td>5</td>
+
+                                            </tr>
+                                            <tr>
+                                                <th>Status:</th>
+                                                <td>Passed</td>
+
+                                            </tr>
+                                            <tr>
+                                                <th>Grade:</th>
+                                                <td>A</td>
+
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        data-toggle="modal" data-target="#exampleModal2">More Details</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Print</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 2-->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Subject</th>
+                                                    <th>Marks Obtained</th>
+                                                    <th>Status</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Maths</td>
+                                                    <td>75</td>
+                                                    <td>Passed</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Physics</td>
+                                                    <td>75</td>
+                                                    <td>Passed</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Chemistry</td>
+                                                    <td>75</td>
+                                                    <td>Passed</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Print</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer">
+                                <p style="color: white;">Demo for school management system by Syed Musavir Chishti. - <a
+                                        style="color: white;">chishti.chisht92@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery vendor -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- bootstrap -->
+
+    <script src="assets/js/lib/calendar-2/moment.latest.min.js"></script>
+    <script src="assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <script src="assets/js/lib/calendar-2/pignose.init.js"></script>
+
+
+    <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/lib/weather/weather-init.js"></script>
+    <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+    <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+    <script src="assets/js/lib/chartist/chartist.min.js"></script>
+    <script src="assets/js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+    <script src="assets/js/lib/sparklinechart/sparkline.init.js"></script>
+    <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+    <!-- scripit init-->
+    <script src="assets/js/dashboard2.js"></script>
+</body>
+
+</html>

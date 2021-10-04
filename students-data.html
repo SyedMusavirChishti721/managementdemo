@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Students data</title>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Styles -->
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style>
+    /* styling search bar */
+    .search input[type=text] {
+        width: 300px;
+        height: 25px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    .search {
+        float: right;
+        margin: 7px;
+    }
+
+    .search button {
+        background-color: #0074D9;
+        color: #f2f2f2;
+        float: right;
+        padding: 5px 10px;
+        margin-right: 16px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" style="background-color: #363E4B;">
+        <div class="nano" style="background-color: #363E4B;">
+            <div class="nano-content" style="background-color: #363E4B;">
+                <ul>
+                    <div class="logo"><a href="#">
+                            <!-- <img src="assets/images/logo.png" alt="" /> --><span style="color: white;"> Teacher
+                                Dashboard</span>
+                        </a></div>
+                    <li class="label">Main</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-home"></i>
+                            Dashboard <span class="badge badge-primary">2</span> <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="#">Dashboard 1</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="label" style="background-color: #363E4B;">Apps</li>
+                    <li style="background-color: #363E4B;"><a class="sidebar-sub-toggle"
+                            style="background-color: #363E4B;"><i class="ti-bar-chart-alt"></i> Charts <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-calendar"></i> Calender </a></li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-email"></i> Email</a></li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-user"></i> Profile</a></li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-layout-grid2-alt"></i> Widget</a>
+                    </li>
+                    <li class="label">Features</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-layout"></i>
+                            settings <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i
+                                class="ti-layout-grid4-alt"></i> Table <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-heart"></i> Icons
+                            <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-map"></i> Maps
+                            <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li class="label" style="background-color: #363E4B;">Form</li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-view-list-alt"></i> Basic Form </a>
+                    </li>
+                    <li class="label">Extra</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-files"></i>
+                            Invoice <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-target"></i> Pages
+                            <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="#" style="background-color: #363E4B;">Login</a></li>
+                            <li><a href="#" style="background-color: #363E4B;">Register</a></li>
+                            <li><a href="#" style="background-color: #363E4B;">Forgot password</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a style="background-color: #363E4B;"><i class="ti-close"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 mt-2">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <i style=" color: #a1a9bc;" class="fa fa-angle-left"></i>
+                            <i style=" color: #a1a9bc;" class="fa fa-align-justify"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-2" style="margin-left: 150px;">
+                    <div class="input-group">
+                        <div class="input-group-btn search-panel">
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-3 mt-2">
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i style=" font-size: 20px;" class="fa fa-bell"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1 mt-0">
+                                    3
+
+                                </span>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="#">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">Mr.Mugees
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-email"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1 style="color: white;">Students</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#" style="color: white;">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" style="color: white;">Students Data</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <section id="main-content" style="background-color: white;">
+                   
+                    <div class="row">
+                        <div class="col-lg-1 d-flex mt-3">
+                            <h6 style="margin-left: 15px; margin-top: 10px; " >Entries:</h6>
+                            <button class="btn  dropdown-toggle ml-1 " type="button" style="height: 42px; color: #000; border: 1px solid black;"
+                                data-bs-toggle="dropdown" aria-expanded="false">10</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">50</a></li>
+                                <li><a class="dropdown-item" href="#">100</a></li>
+                                <li><a class="dropdown-item" href="#">200</a></li>
+                                <li><a class="dropdown-item" href="#">300</a></li>
+
+                            </ul>
+                        </div>
+                        
+                        <div class="col-lg-9 d-flex ml-5 mt-3">
+                            <input class="form-control me-2 ml-1" type="search" placeholder="Name" style="width: 200px; border:1px solid black"
+                            aria-label="Search" >
+                            <button class="btn  dropdown-toggle ml-1" type="button" style="height: 42px; color: #000; border: 1px solid black;"
+                                data-bs-toggle="dropdown" aria-expanded="false">Roll no.</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                                <li><a class="dropdown-item" href="#">4</a></li>
+                                <li><a class="dropdown-item" href="#">5</a></li>
+                                <li><a class="dropdown-item" href="#">6</a></li>
+                                <li><a class="dropdown-item" href="#">7</a></li>
+
+                            </ul>
+                        
+            
+                        <button class="btn  dropdown-toggle ml-1" type="button" style="height: 42px; color: #000; border: 1px solid black;"
+                            data-bs-toggle="dropdown" aria-expanded="false">Class</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                                <li><a class="dropdown-item" href="#">4</a></li>
+                                <li><a class="dropdown-item" href="#">5</a></li>
+                                <li><a class="dropdown-item" href="#">6</a></li>
+                                <li><a class="dropdown-item" href="#">7</a></li>
+                                <li><a class="dropdown-item" href="#">8</a></li>
+                                <li><a class="dropdown-item" href="#">9</a></li>
+                                <li><a class="dropdown-item" href="#">10</a></li>
+
+                            </ul>
+                        <button class="btn  dropdown-toggle ml-1" type="button" style="height: 42px; color: #000; border: 1px solid black;"
+                            data-bs-toggle="dropdown" aria-expanded="false">Section</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1-50</a></li>
+                            <li><a class="dropdown-item" href="#">51-100</a></li>
+                            <li><a class="dropdown-item" href="#">101-150</a></li>
+                            <li><a class="dropdown-item" href="#">151-200</a></li>
+
+                        </ul>
+                        <button class="btn  dropdown-toggle ml-1" type="button" style="height: 42px; color: #000; border: 1px solid black;"
+                            data-bs-toggle="dropdown" aria-expanded="false">Status</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" style="color: green;">Active</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: red;">Inactive</a></li>
+
+
+                        </ul>
+                    </div>
+
+                        <div class="col-lg-1  mt-3">
+                            <button class="btn btn-primary dropdown-toggle " type="button"
+                                data-bs-toggle="dropdown" style=" height: 42px;" aria-expanded="true" >Export</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Excel</a></li>
+                                <li><a class="dropdown-item" href="#">PDF</a></li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered"
+                                        border="1">
+                                        <thead style="text-align: center;">
+                                            <tr>
+                                                <th>Serial No.</th>
+                                                <th>Roll no.</th>
+                                                <th>Student Name</th>
+                                                <th>Class</th>
+                                                <th>Section</th>
+                                                <th>Father Name</th>
+                                                <th>Status</th>
+                                                <th>Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="text-align: center;">
+
+
+
+
+                                            <tr>
+                                                <td>1</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: green;">Active</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: red;">Inactive</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: green;">Active</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: red;">Inactive</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: green;">Active</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: red;">Inactive</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: green;">Active</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: red;">Inactive</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: green;">Active</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+
+                                                <td>1364</td>
+                                                <td>Jack</td>
+                                                <td> 7</td>
+                                                <td> B</td>
+                                                <td>John</td>
+                                                <td style="color: green;">Active</td>
+
+                                                <td><a href="student-info/index.html"><button
+                                                            class="btn btn-sm btn-primary">View Details</button></a>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- /# card -->
+                        </div>
+                        <!-- /# column -->
+                    </div>
+                    <!-- /# row -->
+                    <div class="container">
+                        <div class="row">
+                            <div class=" col-lg-1" style="margin-left: 37%;">
+
+                                <nav class="pagination-box" aria-label="Page navigation">
+
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a href="#" class="page-link" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">5</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- jquery vendor -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+
+    <!-- bootstrap -->
+
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- scripit init-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

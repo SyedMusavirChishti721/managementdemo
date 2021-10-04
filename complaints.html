@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complaints</title>
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+    <!-- Styles -->
+    <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+    <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="assets/css/lib/calendar/fullcalendar.css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/your-embed-code.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    .card-anim:hover {
+        transform: scale(1.03);
+        transition: 0.5s all ease;
+    }
+
+
+
+
+    .stat-text-1 {
+        margin-top: 0px;
+        margin-left: -30px;
+    }
+</style>
+
+<body>
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" style="background-color: #363E4B;">
+        <div class="nano" style="background-color: #363E4B;">
+            <div class="nano-content" style="background-color: #363E4B;">
+                <ul>
+                    <div class="logo"><a href="#">
+                            <!-- <img src="assets/images/logo.png" alt="" /> --><span style="color: white;"></span>
+                        </a></div>
+                    <li class="label">Main</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-home"></i>
+                            Dashboard <span class="badge badge-primary">2</span> <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="#">Dashboard 1</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="label" style="background-color: #363E4B;">Apps</li>
+                    <li style="background-color: #363E4B;"><a class="sidebar-sub-toggle"
+                            style="background-color: #363E4B;"><i class="ti-bar-chart-alt"></i> Charts <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-calendar"></i> Calender </a></li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-email"></i> Email</a></li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-user"></i> Profile</a></li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-layout-grid2-alt"></i> Widget</a>
+                    </li>
+                    <li class="label">Features</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-layout"></i>
+                            settings <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i
+                                class="ti-layout-grid4-alt"></i> Table <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-heart"></i> Icons
+                            <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-map"></i> Maps
+                            <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li class="label" style="background-color: #363E4B;">Form</li>
+                    <li><a href="#" style="background-color: #363E4B;"><i class="ti-view-list-alt"></i> Basic Form </a>
+                    </li>
+                    <li class="label">Extra</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-files"></i>
+                            Invoice <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                    </li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;"><i class="ti-target"></i> Pages
+                            <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="#" style="background-color: #363E4B;">Login</a></li>
+                            <li><a href="#" style="background-color: #363E4B;">Register</a></li>
+                            <li><a href="#" style="background-color: #363E4B;">Forgot password</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a style="background-color: #363E4B;"><i class="ti-close"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 mt-2">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <i style=" color: #a1a9bc;" class="fa fa-angle-left"></i>
+                            <i style=" color: #a1a9bc;" class="fa fa-align-justify"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-2" style="margin-left: 150px;">
+                    <div class="input-group">
+                        <div class="input-group-btn search-panel">
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-3 mt-2">
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i style=" font-size: 20px;" class="fa fa-bell"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1 mt-0">
+                                    3
+
+                                </span>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="#">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">Mr.Mugees
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-email"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Settings</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <section id="main-content" class="mb-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="#">
+                                <div class="card card-anim" style="height: 170px;">
+                                    <div class="stat-widget-one mt-3">
+                                        <div class="stat-icon dib"><i class="fa fa-comments color-warning border-warning  mt-3"></i>
+                                        </div>
+                                        <div class="stat-content dib">
+                                            <center>
+                                                <div class="stat-text" style="margin-left: -10px; margin-top: 10px;">
+                                                    <h2> Total Complaints</h2>
+                                                </div>
+                                            </center>
+                                            <div class="stat-digit" style="margin-top: -10px;"><span
+                                                    class="badge badge-warning">7</span></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                        <div class="col-lg-6">
+                            <a href="#">
+                                <div class="card card-anim" style="height: 170px;">
+                                    <div class="stat-widget-one mt-3">
+                                        <div class="stat-icon dib"><i class="ti ti-email color-danger border-danger  mt-3"></i>
+                                        </div>
+                                        <div class="stat-content dib">
+                                            <center>
+                                                <div class="stat-text" style="margin-left: -10px; margin-top: 10px;">
+                                                    <h2> Total Unread</h2>
+                                                </div>
+                                            </center>
+                                            <div class="stat-digit" style="margin-top: -10px;"><span
+                                                    class="badge badge-danger">5</span></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                        <div class="col-lg-6">
+                            <a href="#">
+                                <div class="card card-anim" style="height: 170px;">
+                                    <div class="stat-widget-one mt-3">
+                                        <div class="stat-icon dib"><i class="fa fa-forward color-success border-success  mt-3"></i>
+                                        </div>
+                                        <div class="stat-content dib">
+                                            <center>
+                                                <div class="stat-text" style="margin-left: -10px; margin-top: 10px;">
+                                                    <h2> Total Forwarded</h2>
+                                                </div>
+                                            </center>
+                                            <div class="stat-digit" style="margin-top: -10px;"><span
+                                                    class="badge badge-success">5</span></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <a href="#">
+                                <div class="card card-anim" style="height: 170px;">
+                                    <div class="stat-widget-one mt-3">
+                                        <div class="stat-icon dib"><i class="fa fa-calendar color-info border-info mt-3"></i>
+                                        </div>
+                                        <div class="stat-content dib">
+                                            <center>
+                                                <div class="stat-text" style="margin-left: -10px; margin-top: 10px;">
+                                                    <h2> Today's Complain</h2>
+                                                </div>
+                                            </center>
+                                            <div class="stat-digit" style="margin-top: -10px;"><span
+                                                    class="badge badge-info">4</span></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="container  ">
+                    <div class="card ">
+                        <div class="stat-widget-one mt-0">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-11">
+                                        <div class="stat-content dib">
+
+                                            <div class="stat-text-1 ">
+                                                <h2>Complains</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <table class="table table-bordered mb-3">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Serial No.</th>
+                                    <th>Complain No.</th>
+                                    <th>Complain From</th>
+                                    <th>Sender Name</th>
+                                    <th class="text-center">Date of submission</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <th scope="row">1</th>
+                                    <td>35</td>
+                                    <td>Teacher</td>
+                                    <td>Miss Maria</td>
+                                    <td class="text-center">5 October</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">2</th>
+                                    <td>35</td>
+                                    <td>Teacher</td>
+                                    <td>Miss Maria</td>
+                                    <td class="text-center">5 October</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">3</th>
+                                    <td>35</td>
+                                    <td>Teacher</td>
+                                    <td>Miss Maria</td>
+                                    <td class="text-center">5 October</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">4</th>
+                                    <td>35</td>
+                                    <td>Teacher</td>
+                                    <td>Miss Maria</td>
+                                    <td class="text-center">5 October</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">5</th>
+                                    <td>35</td>
+                                    <td>Teacher</td>
+                                    <td>Miss Maria</td>
+                                    <td class="text-center">5 October</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">6</th>
+                                    <td>35</td>
+                                    <td>Teacher</td>
+                                    <td>Miss Maria</td>
+                                    <td class="text-center">5 October</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+        </div>
+
+        <!-- jquery vendor -->
+        <script src="assets/js/lib/jquery.min.js"></script>
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+        <!-- nano scroller -->
+        <script src="assets/js/lib/menubar/sidebar.js"></script>
+        <script src="assets/js/lib/preloader/pace.min.js"></script>
+        <!-- sidebar -->
+
+        <script src="assets/js/lib/bootstrap.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <!-- bootstrap -->
+
+        <script src="assets/js/lib/calendar-2/moment.latest.min.js"></script>
+        <script src="assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+        <script src="assets/js/lib/calendar-2/pignose.init.js"></script>
+
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+        <script src="assets/js/lib/weather/weather-init.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+        <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+        <script src="assets/js/lib/chartist/chartist.min.js"></script>
+        <script src="assets/js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+        <script src="assets/js/lib/sparklinechart/sparkline.init.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+        <!-- scripit init-->
+        <script src="assets/js/dashboard2.js"></script>
+        <script src="assets/js/lib/calendar/fullcalendar.min.js"></script>
+        <script src="assets/js/lib/calendar/fullcalendar-init.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>

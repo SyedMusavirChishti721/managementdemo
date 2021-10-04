@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Management Dashboard</title>
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+    <!-- Styles -->
+    <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+    <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="assets/css/lib/calendar/fullcalendar.css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/your-embed-code.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    
+</head>
+<style>
+    .card-anim:hover {
+        transform: scale(1.03);
+        transition: 0.5s all ease;
+    }
+
+    .pieContainer {
+        height: 150px;
+        position: relative;
+    }
+
+    .pieBackground {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .pie {
+        transition: all 1s;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        clip: rect(0px, 75px, 150px, 0px);
+    }
+
+    .hold {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        clip: rect(0px, 150px, 150px, 75px);
+    }
+
+    #pieSlice1 .pie {
+        background-color: #1b458b;
+        transform: rotate(30deg);
+    }
+
+    #pieSlice2 {
+        transform: rotate(30deg);
+    }
+
+    #pieSlice2 .pie {
+        background-color: #0a0;
+        transform: rotate(60deg);
+    }
+
+    #pieSlice3 {
+        transform: rotate(90deg);
+    }
+
+    #pieSlice3 .pie {
+        background-color: #f80;
+        transform: rotate(120deg);
+    }
+
+    #pieSlice4 {
+        transform: rotate(210deg);
+    }
+
+    #pieSlice4 .pie {
+        background-color: #08f;
+        transform: rotate(10deg);
+    }
+
+    #pieSlice5 {
+        transform: rotate(220deg);
+    }
+
+    #pieSlice5 .pie {
+        background-color: #a04;
+        transform: rotate(70deg);
+    }
+
+    #pieSlice6 {
+        transform: rotate(290deg);
+    }
+
+    #pieSlice6 .pie {
+        background-color: #ffd700;
+        transform: rotate(70deg);
+    }
+
+    .innerCircle {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background-color: #444;
+        border-radius: 100%;
+        top: 15px;
+        left: 15px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5) inset;
+        color: white;
+    }
+
+    .innerCircle .content {
+        position: absolute;
+        display: block;
+        width: 120px;
+        top: 30px;
+        left: 0;
+        text-align: center;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" style="background-color: #363E4B;">
+        <div class="nano" style="background-color: #363E4B;">
+            <div class="nano-content" style="background-color: #363E4B;">
+                <ul>
+                    <div class="logo"><a href="#">
+                            <!-- <img src="assets/images/logo.png" alt="" /> --><span style="color: white;"> Principal
+                                Dashboard</span>
+                        </a></div>
+                    <li class="label">Main</li>
+                    <li><a class="sidebar-sub-toggle" style="background-color: #363E4B;" href="teacher-dashboard.html"><i class="ti-home"></i>
+                            Dashboard </a>
+                     
+                    </li>
+
+                    <li class="label" style="background-color: #363E4B;">Apps</li>
+                    <li style="background-color: #363E4B;"><a class="sidebar-sub-toggle" href="students-management.html"
+                            style="background-color: #363E4B;"><i class="ti-user"></i> Students </a>
+
+                    </li>
+                    <li><a href="teacher-details.html" style="background-color: #363E4B;"><i class="fa fa-user"></i>teacher </a></li>
+                    <li><a href="teacher-details.html" style="background-color: #363E4B;"><i class="fa fa-users"></i> Staff</a></li>
+                    <li><a href="management-dashboard.html" style="background-color: #363E4B;"><i class="ti-user"></i> Profile</a></li>
+                    <li><a href="management-sub.html" style="background-color: #363E4B;"><i class="fa fa-book"></i>Accounts</a>
+                    </li>
+                    <li><a href="app-email.html" style="background-color: #363E4B;"><i class="ti-email"></i>Emails</a>
+                    </li>
+                  
+
+                    <li><a href="calender.html" style="background-color: #363E4B;"><i class="ti-calendar"></i>calendar</a>
+                    </li>
+                  
+                    <li><a href="reports.html" style="background-color: #363E4B;"><i class="ti-files"></i> Reports</a></li>
+                    <li><a href="attendance-management.html" style="background-color: #363E4B;"><i class="fa fa-address-book"></i> Attendance</a></li>
+                    <li><a href="complaints.html" style="background-color: #363E4B;"><i class="ti-pencil-alt"></i> Feedback</a></li>
+                    <li><a href="complaints.html" style="background-color: #363E4B;"><i class="fa fa-check"></i> Approvals</a></li>
+                    <li><a style="background-color: #363E4B;"><i class="ti-close"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 mt-2">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <i style=" color: #a1a9bc;" class="fa fa-angle-left"></i>
+                            <i style=" color: #a1a9bc;" class="fa fa-align-justify"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-2" style="margin-left: 150px;">
+
+                </div>
+                <div class="col-lg-3 mt-2">
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i style=" font-size: 20px;" class="fa fa-bell"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1 mt-0">
+                                    3
+
+                                </span>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="#">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi demo, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr.Musavir</div>
+                                                        <div class="notification-text">Hi , Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">Mr.Mugees
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-email"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Settings</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="content-wrap">
+        <div class="main">
+
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-tabs md-tabs mt-3" id="myTabMD" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab"
+                                aria-controls="home-md" aria-selected="true">Students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab"
+                                aria-controls="profile-md" aria-selected="false">Teacher</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab"
+                                aria-controls="contact-md" aria-selected="false">Staff</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content card pt-5" id="myTabContentMD">
+                        <div class="tab-pane fade show active" id="home-md" role="tabpanel"
+                            aria-labelledby="home-tab-md">
+                            <div class="table-responsive">
+                                <table id="bootstrap-data-table-export" class="table table-striped table-bordered"
+                                    border="1">
+                                    <thead>
+                                        <tr style="text-align: center;">
+                                            <th>Serial No.</th>
+                                            <th>Roll no.</th>
+                                            <th>Student Name</th>
+                                            <th>Status</th>
+                                            <th>Class</th>
+
+                                            <th>Section</th>
+                                            <th>Checkin time</th>
+                                            <th>Checkout time</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+
+
+
+
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">2</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">3</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">4</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">5</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">6</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">7</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">8</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">9</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">10</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Student Name</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 120px;">6</td>
+                                            <td style="width: 100px; text-align: center;">B</td>
+                                            <td>7:00 AM</td>
+                                            <td>1:00 PM</td>
+                                            <td>29/9/2021</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="attendance.html">
+                                        <div class="card" style="height: 400px;">
+                                            <h3>Today's Students Attendance</h3>
+
+                                            <div id="chartContainer" style="height: 600px; width: 100%;" class="hover">
+                                            </div>
+                                            <script type="text/javascript">
+                                                window.onload = function () {
+
+                                                    var chart = new CanvasJS.Chart("chartContainer",
+                                                        {
+
+                                                            legend: {
+                                                                maxWidth: 500,
+                                                                itemWidth: 120
+                                                            },
+                                                            data: [
+                                                                {
+                                                                    type: "pie",
+                                                                    showInLegend: true,
+                                                                    legendText: "{indexLabel}",
+                                                                    dataPoints: [
+                                                                        { y: 560, indexLabel: "Present" },
+                                                                        { y: 57, indexLabel: "Absent" },
+                                                                        { y: 29, indexLabel: "leave" }
+
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        });
+                                                    chart.render();
+                                                }
+                                            </script>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <img src="assets/images/chart.JPG" style="height: 357px;">
+                                      
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
+                            <div class="table-responsive">
+                                <table id="bootstrap-data-table-export" class="table table-striped table-bordered"
+                                    border="1">
+                                    <thead>
+                                        <tr style="text-align: center;">
+                                            <th>SNo.</th>
+                                            <th>Emp ID</th>
+                                            <th>Teacher Name</th>
+                                            <th>Department</th>
+                                            <th>Status</th>
+
+                                            <th>Date</th>
+                                            <th>Checkin time</th>
+                                            <th>Checkout time</th>
+                                            <th>Total hours</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="attendance.html">
+                                        <div class="card" style="height: 400px;">
+                                            <h3>Today's Staff Attendance</h3>
+                                            <img src="assets/images/piechart.JPG">
+                                           </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <img src="assets/images/chart.JPG" style="height: 357px;">
+                                      
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+                            <div class="table-responsive">
+                                <table id="bootstrap-data-table-export" class="table table-striped table-bordered"
+                                    border="1">
+                                    <thead>
+                                        <tr style="text-align: center;">
+                                            <th>SNo.</th>
+                                            <th>Emp ID</th>
+                                            <th>Staff Name</th>
+                                            <th>Department</th>
+                                            <th>Status</th>
+
+                                            <th>Date</th>
+                                            <th>Checkin time</th>
+                                            <th>Checkout time</th>
+                                            <th>Total hours</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+                                        <tr style="text-align: center;">
+                                            <td style="width: 100px;">1</td>
+                                            <td style="width: 100px;">19953</td>
+                                            <td>Jackson</td>
+                                            <td>Mathematics</td>
+                                            <td style="color: green;">Present</td>
+                                            <td style="width: 170px;">29/9/21</td>
+                                            <td style=" text-align: center">7:00 AM</td>
+                                            <td style=" text-align: center">12:00 AM</td>
+                                            <td style="text-align: center;">8</td>
+
+
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="attendance.html">
+                                        <div class="card" style="height: 400px;">
+                                            <h3>Today's Staff Attendance</h3>
+                                            <img src="assets/images/piechart.JPG">
+                                           </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <img src="assets/images/chart.JPG" style="height: 357px;">
+                                      
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pie-md" role="tabpanel" aria-labelledby="pie-tab-md"
+                            style="height: 500px;">
+                            <div class="col-lg-6">
+                                <a href="attendance.html">
+                                    <div class="card" style=" width: 100%; height: 300px;">
+                                        <h3>Student's Attendance</h3>
+
+                                        <div class="pieContainer">
+                                            <div class="pieBackground"></div>
+                                            <div id="pieSlice1" class="hold">
+                                                <div class="pie"></div>
+                                            </div>
+                                            <div id="pieSlice2" class="hold">
+                                                <div class="pie"></div>
+                                            </div>
+                                            <div id="pieSlice3" class="hold">
+                                                <div class="pie"></div>
+                                            </div>
+                                            <div id="pieSlice4" class="hold">
+                                                <div class="pie"></div>
+                                            </div>
+                                            <div id="pieSlice5" class="hold">
+                                                <div class="pie"></div>
+                                            </div>
+                                            <div id="pieSlice6" class="hold">
+                                                <div class="pie"></div>
+                                            </div>
+                                            <div class="innerCircle">
+                                                <div class="content"><b>Data</b><br>from 16<sup>th</sup> April, 2014
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-1" style="margin-left: 37%;">
+
+                    <nav class="pagination-box" aria-label="Page navigation">
+
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a href="#" class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    </div>
+    </div>
+    <!-- jquery vendor -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- bootstrap -->
+
+    <script src="assets/js/lib/calendar-2/moment.latest.min.js"></script>
+    <script src="assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <script src="assets/js/lib/calendar-2/pignose.init.js"></script>
+
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/lib/weather/weather-init.js"></script>
+    <script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+    <script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+    <script src="assets/js/lib/chartist/chartist.min.js"></script>
+    <script src="assets/js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+    <script src="assets/js/lib/sparklinechart/sparkline.init.js"></script>
+    <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+    <!-- scripit init-->
+    <script src="assets/js/dashboard2.js"></script>
+    <script src="assets/js/lib/calendar/fullcalendar.min.js"></script>
+    <script src="assets/js/lib/calendar/fullcalendar-init.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

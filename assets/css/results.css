@@ -1,0 +1,79 @@
+
+.itemsStatus{
+    padding: 40px;
+}
+body{
+    background-color: #f8f8ff;
+}
+
+#itemsIcons{
+display: flex;
+font-size: 30px;
+gap: 15px;
+}
+
+#itemsIcons h6{
+    color: #a1a9bc;
+}
+
+    #itemsIcons h6 span{
+        font-size: 30px;
+        color: black !important;
+        }
+        
+
+.itemsStatusIconsandtext{
+    position: relative;
+    left: 10%;
+}
+
+
+.iconsStundents:before{
+    border: 1px transparent;
+    border-radius: 55px;
+    width: 25%;
+    padding: 15px 0px 0px 18px;
+    background-color: #e7f0ff;
+}
+
+
+.iconsOverScore:before{
+    border: 1px transparent;
+    border-radius: 55px;
+    width: 25%;
+    padding: 15px 0px 0px 13px;
+    background-color: #e7f0ff;
+}
+
+.iconsAbsents:before{
+    border: 1px transparent;
+    border-radius: 55px;
+    width: 25%;
+    padding: 15px 0px 0px 24px;
+    background-color: #e7f0ff;
+}
+
+.iconsFinish:before{
+    border: 1px transparent;
+    border-radius: 55px;
+    width: 25%;
+    padding: 15px 0px 0px 17px;
+    background-color: #e7f0ff;
+}
+
+.iconsPassed:before{
+    border: 1px transparent;
+    border-radius: 55px;
+    width: 25%;
+    padding: 15px 0px 0px 13px;
+    background-color: #e7f0ff;
+}
+
+
+.iconsFailed:before{
+    border: 1px transparent;
+    border-radius: 55px;
+    width: 25%;
+    padding: 15px 0px 0px 16px;
+    background-color: #e7f0ff;
+}
